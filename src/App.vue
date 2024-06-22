@@ -7,7 +7,7 @@ onLaunch((opts: any) => {
   }
   uni.setStorageSync('is_proxy', +query?.is_proxy || 2);
 
-  uni.setStorageSync('host', query.env == 'dev' ? 'debian.hhshsq.cn:9701' : 'debian.hhshsq.cn:9702');
+  uni.setStorageSync('host', query.env == 'dev' ? 'http://debian.hhshsq.cn:9701' : 'https://debian.hhshsq.cn:9702');
 });
 onShow(() => {
   console.log('App Show');

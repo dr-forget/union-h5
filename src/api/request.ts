@@ -236,7 +236,7 @@ class Http {
 }
 export const run = () => {
   const host = uni.getStorageSync('host');
-  return Http.getInstance({ baseUrl: `http://${host}` });
+  return Http.getInstance({ baseUrl: host });
 };
 // 调用第三方api请求方式,
 export const request = async <T>(url: string, method: UniApp.RequestOptions['method'] = 'GET', data?: any): Promise<T> => {
