@@ -18,13 +18,13 @@
     <script type="module" src="/src/main.ts"></script>
   </body>
   <script>
-    // const ua = navigator.userAgent.toLowerCase();
-    // if (!(ua.match(/MicroMessenger/i)?.[0] == 'micromessenger')) {
-    //   const root = document.getElementById('app');
-    //   const div = document.createElement('div');
-    //   div.innerHTML = '<h3>请在微信中打开</h3>';
-    //   root.remove();
-    //   document.body.appendChild(div);
-    // }
+    const ua = navigator.userAgent.toLowerCase();
+    if (!(ua.match(/MicroMessenger/i)?.[0] == 'micromessenger')) {
+      const root = document.getElementById('app');
+      const div = document.createElement('div');
+      div.innerHTML = '<h3>请在微信中打开</h3>';
+      root.remove();
+      document.body.appendChild(div);
+    }
   </script>
 </html>

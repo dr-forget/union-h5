@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/union/(.*)",
+      "destination": "http://debian.hhshsq.cn:9702/union/$1" // 转发到 HTTP 服务器
+    }
+  ]
+}
