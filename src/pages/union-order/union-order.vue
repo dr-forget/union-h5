@@ -58,6 +58,7 @@ const tabsChange = (item) => {
   if (state.current == item.index) return;
   state.current = item.index;
   nextTick(onRequestData);
+  uni.pageScrollTo({ scrollTop: 0, duration: 200 });
 };
 
 const statusChange = (item) => {
