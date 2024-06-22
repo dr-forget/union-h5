@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "lin9applet-color"; /* Project id 3638009 */
+  /* Color fonts */
+  src: 
+       url('https://storage.szline9.com/frontend/font-css/applet/color/iconfont.woff2?t=1715415507544') format('woff2'),
+       url('https://storage.szline9.com/frontend/font-css/applet/color/iconfont.woff?t=1715415507544') format('woff'),
+       url('https://storage.szline9.com/frontend/font-css/applet/color/iconfont.ttf?t=1715415507544') format('truetype');
+}
+
+.lin9applet-color {
+  font-family: "lin9applet-color" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lin9applet-colora-sanbu1x:before {
+  content: "\e661";
+}
+
+.lin9applet-colora-tuiguang1x:before {
+  content: "\e660";
+}
+
+.lin9applet-colorgaoyong-sheng1:before {
+  content: "\e602";
+}
+
+.lin9applet-colora-zu12369:before {
+  content: "\e64e";
+}
+
+.lin9applet-colorgaoyong-sheng:before {
+  content: "\e601";
+}
+
+.lin9applet-colora-zu123691:before {
+  content: "\e64d";
+}
+
+.lin9applet-colora-zu12442:before {
+  content: "\e647";
+}
+
+.lin9applet-colorlujing1:before {
+  content: "\e648";
+}
+
+.lin9applet-colora-jianqudingceng1:before {
+  content: "\e646";
+}
+
+.lin9applet-colora-lujing2:before {
+  content: "\e644";
+}
+
+.lin9applet-colorlujing:before {
+  content: "\e641";
+}
+
+.lin9applet-colora-zu12086:before {
+  content: "\e642";
+}
+
+.lin9applet-colora-lujing1:before {
+  content: "\e643";
+}
+
+.lin9applet-colora-zu12107:before {
+  content: "\e63e";
+}
+
+.lin9applet-colora-zu12108:before {
+  content: "\e63f";
+}
+
+.lin9applet-colora-zu12106:before {
+  content: "\e640";
+}
+
+.lin9applet-colora-lujing46:before {
+  content: "\e600";
+}
+
+.lin9applet-colora-zu383:before {
+  content: "\e63b";
+}
+
+.lin9applet-colora-zu379:before {
+  content: "\e63d";
+}
+
+.lin9applet-colora-zu11612:before {
+  content: "\e63a";
+}
+
+.lin9applet-colora-zu12068:before {
+  content: "\e638";
+}
+
+.lin9applet-colorzhifubao:before {
+  content: "\e62f";
+}
+
+.lin9applet-colora-zu10600:before {
+  content: "\e630";
+}
+
+.lin9applet-colortixian:before {
+  content: "\e61b";
+}
+
+.lin9applet-colora-zu6585:before {
+  content: "\e619";
+}
+
+.lin9applet-colorweixinzhifu:before {
+  content: "\e689";
+}
+
+.lin9applet-colora-tupianzhaopian:before {
+  content: "\e610";
+}
+
+.lin9applet-colora-yiwenbangzhu:before {
+  content: "\e614";
+}
+
+.lin9applet-colorkefu1:before {
+  content: "\e60a";
+}
+
+.lin9applet-colordizhi:before {
+  content: "\e60c";
+}
+
+.lin9applet-colorshezhi:before {
+  content: "\e60d";
+}
+
+.lin9applet-colorpinglunhuifu:before {
+  content: "\e60e";
+}
+
+.lin9applet-coloryijianfankui:before {
+  content: "\e60f";
+}
+
+.lin9applet-colora-zu4219:before {
+  content: "\e60b";
+}
+

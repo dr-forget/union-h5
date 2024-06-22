@@ -1,0 +1,299 @@
+input {
+  caret-color: $uni-color-primary
+}
+
+@for $i from 1 through 88 {
+
+  // 大于20 生成字体
+  @if $i % 2==0 {
+    @if $i >=20 {
+      .f-#{$i} {
+        font-size: #{$i}rpx;
+      }
+    }
+
+    // 外边距margin-top
+    .mt-#{$i} {
+      margin-top: #{$i}rpx;
+    }
+
+    // 外边距margin-bottom
+    .mb-#{$i} {
+      margin-bottom: #{$i}rpx;
+    }
+
+    .ml-#{$i} {
+      margin-left: #{$i}rpx;
+    }
+
+    .mr-#{$i} {
+      margin-right: #{$i}rpx;
+    }
+
+    .pt-#{$i} {
+      padding-top: #{$i}rpx;
+    }
+
+    .pr-#{$i} {
+      padding-right: #{$i}rpx;
+    }
+
+    .pb-#{$i} {
+      padding-bottom: #{$i}rpx;
+    }
+
+    .pl-#{$i} {
+      padding-left: #{$i}rpx;
+    }
+
+    .m-#{$i} {
+      margin: #{$i}rpx;
+    }
+
+    .p-#{$i} {
+      padding: #{$i}rpx;
+    }
+
+    .px-#{$i} {
+      padding-left: #{$i}rpx;
+      padding-right: #{$i}rpx;
+    }
+
+    .mx-#{$i} {
+      margin-left: #{$i}rpx;
+      margin-right: #{$i}rpx;
+    }
+
+    .my-#{$i} {
+      margin-top: #{$i}rpx;
+      margin-bottom: #{$i}rpx;
+    }
+
+    .py-#{$i} {
+      padding-top: #{$i}rpx;
+      padding-bottom: #{$i}rpx;
+    }
+  }
+
+
+
+}
+
+.mt-100 {
+  margin-top: 100rpx;
+}
+
+/* 圆角 */
+$BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几个值
+
+@each $item in $BorderRaidus {
+
+  .radius-#{$item} {
+    border-radius: #{$item}rpx;
+  }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.f-100 {
+  font-size: 100rpx;
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+.f-middle {
+  font-weight: 500;
+}
+
+.bg-white {
+  background: #fff;
+}
+.bg-f4f5{
+  background: #f4f5f6;
+}
+.bg-primary {
+  background: $uni-color-primary;
+}
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-shrink {
+  flex-shrink: 0;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.align-items,
+.items-center {
+  align-items: center;
+
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.t-center {
+  text-align: center;
+}
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-through {
+  text-decoration: line-through
+}
+
+.c-888 {
+  color: #8888;
+}
+
+.c-787 {
+  color: #787878;
+}
+
+.c-fff {
+  color: #fff
+}
+
+.c-gray {
+  color: #606060
+}
+
+.c-666 {
+  color: #666;
+}
+
+.c-333 {
+  color: #333
+}
+
+.c-afa {
+  color: #afafaf
+}
+
+.c-707 {
+  color: #707070
+}
+
+.c-999 {
+  color: #999;
+}
+
+.c-origin {
+  color: #FF6830;
+}
+
+.c-gold{
+  color:#FD7A55
+}
+
+.c-959 {
+  color: #959595;
+}
+
+.c-gray-t {
+  color: gray;
+}
+
+.c-tips {
+  color: $uni-color-warning
+}
+.c-f0f {
+  color: #F0F0F0;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.c-price,
+.c-primary {
+  color: $uni-color-primary;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+
+}
+
+.border-bottom {
+  border-bottom: 1px solid #F4F5F7
+}
+
+.transition {
+  transition: all 0.2s;
+}
+
+.footer {
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 990;
+  box-shadow: 0px -2rpx 6rpx 2rpx rgba(143, 143, 143, 0.16);
+}
+
+.safe-height {
+  height: 120rpx;
+}
+
+.icon {
+  font-size: 60rpx;
+}
+
+.border-box {
+  box-sizing: border-box;
+}

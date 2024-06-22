@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "allowJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["@dcloudio/types"]
+  },
+  "type": ["node"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/**/*.vue", "src/**/*.vue", "template/**/*.vue", "template/**/*.ts", "./types/*.d.ts", "src/utils/validation.js"],
+  "exclude": ["src/uni_modules/uview-plus/index.js", "src/components/mp-html/**/*.vue", "src/uni_modules/uview-plus/**/*.vue"]
+}
