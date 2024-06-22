@@ -58,13 +58,14 @@ const tabsChange = (item) => {
   if (state.current == item.index) return;
   state.current = item.index;
   nextTick(onRequestData);
-  uni.pageScrollTo({ scrollTop: 0, duration: 200 });
+  uni.pageScrollTo({ scrollTop: 0, duration: 100 });
 };
 
 const statusChange = (item) => {
   if (state.status_current == item.index) return;
   state.status_current = item.index;
   nextTick(onRequestData);
+  uni.pageScrollTo({ scrollTop: 0, duration: 100 });
 };
 
 onReachBottom(() => {
