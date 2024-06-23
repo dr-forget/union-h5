@@ -44,8 +44,8 @@ const state = reactive<any>({
 
 const onLoadInfo = async (id: string) => {
   const res: any = await onGetUserHistory(id);
-  console.log(res, 47);
   state.history = res.history;
+  state.user_header_url = res.header_url;
   if (res.history.length <= 1) {
     createWebsocket();
   }
@@ -138,7 +138,7 @@ const createWebsocket = async () => {
 onLoad((res: any) => {
   state.ws_id = res.m;
   if (res.env == 'dev') {
-    state.host = 'ws://debian.hhshsq.cn:9701';
+    state.host = 'ws://192.168.5.21:9700';
   }
   if (res.m) {
     onLoadInfo(res.m);
