@@ -39,7 +39,7 @@ const state = reactive<any>({
   user_header_url: '',
   ws_id: '',
   tempcontent: '', //临时组装内容
-  host: 'debian.hhshsq.cn:9702',
+  host: 'wss://debian.hhshsq.cn:9702',
 });
 
 const onLoadInfo = async (id: string) => {
@@ -79,7 +79,7 @@ const sendContent = () => {
 
 const createWebsocket = async () => {
   const socket = uni.connectSocket({
-    url: `ws://${state.host}/fly-spark?id=${state.ws_id}`,
+    url: `${state.host}/fly-spark?id=${state.ws_id}`,
     success: (res) => {
       console.log('connectSocket success', res);
     },
@@ -138,7 +138,7 @@ const createWebsocket = async () => {
 onLoad((res: any) => {
   state.ws_id = res.m;
   if (res.env == 'dev') {
-    state.host = 'debian.hhshsq.cn:9701';
+    state.host = 'ws://debian.hhshsq.cn:9701';
   }
   if (res.m) {
     onLoadInfo(res.m);
