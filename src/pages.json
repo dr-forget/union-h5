@@ -16,6 +16,13 @@
         "navigationBarTextStyle": "white",
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/reject-withdral/reject-withdral",
+      "style": {
+        "navigationBarTitleText": "提现拒绝",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "easycom": {
