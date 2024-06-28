@@ -23,6 +23,13 @@
         "navigationBarTitleText": "提现拒绝",
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/wx-code/wx-code",
+      "style": {
+        "navigationBarTitleText": "省好呗返莉机器人",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "easycom": {
