@@ -1,9 +1,8 @@
 input {
-  caret-color: $uni-color-primary
+  caret-color: $uni-color-primary;
 }
 
 @for $i from 1 through 88 {
-
   // 大于20 生成字体
   @if $i % 2==0 {
     @if $i >=20 {
@@ -74,9 +73,6 @@ input {
       padding-bottom: #{$i}rpx;
     }
   }
-
-
-
 }
 
 .mt-100 {
@@ -84,10 +80,9 @@ input {
 }
 
 /* 圆角 */
-$BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几个值
+$BorderRaidus: 20, 16, 8, 6, 12, 30; // 取值范围只能是所定义的这几个值
 
 @each $item in $BorderRaidus {
-
   .radius-#{$item} {
     border-radius: #{$item}rpx;
   }
@@ -112,7 +107,7 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 .bg-white {
   background: #fff;
 }
-.bg-f4f5{
+.bg-f4f5 {
   background: #f4f5f6;
 }
 .bg-primary {
@@ -161,7 +156,6 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 .align-items,
 .items-center {
   align-items: center;
-
 }
 
 .items-start {
@@ -184,7 +178,7 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 }
 
 .t-through {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .c-888 {
@@ -196,11 +190,11 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 }
 
 .c-fff {
-  color: #fff
+  color: #fff;
 }
 
 .c-gray {
-  color: #606060
+  color: #606060;
 }
 
 .c-666 {
@@ -208,15 +202,15 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 }
 
 .c-333 {
-  color: #333
+  color: #333;
 }
 
 .c-afa {
-  color: #afafaf
+  color: #afafaf;
 }
 
 .c-707 {
-  color: #707070
+  color: #707070;
 }
 
 .c-999 {
@@ -224,11 +218,11 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 }
 
 .c-origin {
-  color: #FF6830;
+  color: #ff6236;
 }
 
-.c-gold{
-  color:#FD7A55
+.c-gold {
+  color: #ff6236;
 }
 
 .c-959 {
@@ -240,10 +234,10 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 }
 
 .c-tips {
-  color: $uni-color-warning
+  color: $uni-color-warning;
 }
 .c-f0f {
-  color: #F0F0F0;
+  color: #f0f0f0;
 }
 
 .hidden {
@@ -265,11 +259,10 @@ $BorderRaidus: 20, 16, 8, 6,12, 30; // 取值范围只能是所定义的这几�
 
 .relative {
   position: relative;
-
 }
 
 .border-bottom {
-  border-bottom: 1px solid #F4F5F7
+  border-bottom: 1px solid #f4f5f7;
 }
 
 .transition {

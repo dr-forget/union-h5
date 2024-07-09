@@ -25,4 +25,5 @@ interface H5UniOrderListRow {
   updatedAt: string;
   super_commission_money?: number;
   is_self: boolean;
+  rights_protection_status: number;
 }

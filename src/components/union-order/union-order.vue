@@ -5,25 +5,22 @@
     </view>
     <view class="content flex flex-between pl-20">
       <view>
-        <view class="f-26 u-line-2 c-333">{{ props.shopTitle }}</view>
-        <view v-if="props.shopspec" class="f-28 c-333 mt-8">
-          <text>规格属性 </text>
-        </view>
+        <view class="f-26 u-line-2" :class="props.status == 3 ? 'c-999' : 'c-333'">{{ props.shopTitle }}</view>
       </view>
       <view class="flex items-center flex-between w-full f-26">
         <slot name="price">
-          <view class="mr-30">实付:￥{{ $formatMoney(props.shopPrice) }}</view>
+          <view class="mr-30" :class="props.status == 3 ? 'c-999' : 'c-333'">实付:￥{{ $formatMoney(props.shopPrice) }}</view>
         </slot>
         <view class="f-24">
           <view v-if="!props.is_self">
-            <text style="color: #ff6236" class="f-middle">
+            <text :class="props.status == 3 ? 'c-999' : 'c-origin'" class="f-middle">
               <text>分佣</text>
               <text class="f-28">￥{{ $formatMoney(props.commise) }}</text>
             </text>
           </view>
           <view class="flex flex-1" v-else>
             <view class="flex flex-between items-center">
-              <text style="color: #ff6236" class="f-middle">
+              <text class="f-middle" :class="props.status == 3 ? 'c-999' : 'c-origin'">
                 <text>返利</text>
                 <text class="f-28">￥{{ $formatMoney(props.user_money) }}</text>
               </text>
@@ -50,6 +47,7 @@ interface Isprops {
   is_self: boolean;
   status: number;
   user_money: string | number;
+  rights_protection_status: number;
 }
 const props = withDefaults(defineProps<Isprops>(), {
   imgurl: '', ///商品图片
@@ -64,6 +62,7 @@ const props = withDefaults(defineProps<Isprops>(), {
   user_settle_at: 0,
   user_money: 0,
   user_id: 0,
+  rights_protection_status: 0,
 });
 
 const emit = defineEmits(['click']);
@@ -71,6 +70,9 @@ const emit = defineEmits(['click']);
 const { showModal } = lineHook();
 
 const commise_status = (value) => {
+  if (props.rights_protection_status && props.rights_protection_status !== 3) {
+    return props.rights_protection_status !== 2 ? '维权中' : '维权成功';
+  }
   const status_map = new Map([
     [1, '冻结中'],
     [2, '已结算'],

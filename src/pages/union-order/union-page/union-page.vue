@@ -3,8 +3,8 @@
     <view v-for="(item, i) in state.orderData" :key="i" class="p-24 radius-12 bg-white mb-20">
       <header-top :shopname="platform_name(item.rebate_platform)" :logo="platfromIcon[item.rebate_platform || ''] || 'https://storage.szline9.com/frontend/static/public/%E8%B7%AF%E5%BE%84.png'">
         <template #rightTop>
-          <view v-if="item.is_self" class="c-primary">{{ commise_status(item.order_status) }}</view>
-          <view class="c-primary f-26" v-else>好友下单</view>
+          <view v-if="item.is_self" class="f-26" :class="item.order_status == 3 ? 'c-999' : 'c-primary'">{{ commise_status(item.order_status) }}</view>
+          <view class="f-26" :class="item.order_status == 3 ? 'c-999' : 'c-primary'" v-else>好友下单</view>
         </template>
       </header-top>
       <union-order
@@ -16,14 +16,15 @@
         :is_self="item.is_self"
         :status="item.order_status"
         :user_money="item.rebate_money"
+        :rights_protection_status="item.rights_protection_status"
       >
         <template #price>
-          <view class="mr-30">实付:￥{{ $formatMoney(item.order_amount || '') }}</view>
+          <view class="mr-30" :class="item.order_status == 3 ? 'c-999' : 'c-333'">实付:￥{{ $formatMoney(item.order_amount || '') }}</view>
         </template>
         <template #bottom>
           <view class="mt-20">
             <u-line></u-line>
-            <view class="mt-20 f-24 c-333">
+            <view class="mt-20 f-24" :class="item.order_status == 3 ? 'c-999' : 'c-333'">
               <view class="flex flex-between items-center">
                 <view>
                   <view v-if="item.price_compare_status == 1" class="f-24 flex items-center c-primary" @click.stop="state.showtips = true">
@@ -31,6 +32,9 @@
                     <view class="mt-4">
                       <u-icon name="question-circle" size="24rpx" color="#F62349"></u-icon>
                     </view>
+                  </view>
+                  <view v-if="item.rights_protection_status && item.rights_protection_status !== 3" class="c-primary mb-12">
+                    {{ item.rights_protection_status == 2 ? '维权成功佣金已重新分配' : '订单维权中佣金已锁定' }}
                   </view>
                   <view class="mt-6 f-24">
                     <text>订单状态：{{ item.order_status_desc }}</text>
