@@ -15,6 +15,6 @@ const uploadServe = new staticUpload({
 });
 const ongetOsspublic = async () => {
   const { qiniu, mac, config } = await uploadServe.qiniuUpload();
-  uploadServe.deleteQiniufile(qiniu, { mac, config, prefix: `frontend/unionh5/${pkg.version}` });
+  // uploadServe.deleteQiniufile(qiniu, { mac, config, prefix: `frontend/unionh5/${pkg.version}` });
 };
 ongetOsspublic();
